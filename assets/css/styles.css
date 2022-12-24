@@ -3,14 +3,16 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-    --header-height: 3rem;
+    /* --header-height: 3rem; */
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 207; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --sat:90%;
+    --lig:61%;
 
     /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 69%, 61%);
+    /* --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -19,29 +21,51 @@
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff; */
+
+
+    --first-color: hsl(var(--hue), var(--sat), var(--lig));
+    /* --first-color-second: hsl(var(--hue-color), 69%, 61%); */
+    --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
+    /* --first-color-lighter: hsl(var(--hue-color), 92%, 85%); */
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color:  hsl(var(--hue), 12%, 45%);
+    --text-color-light:  hsl(var(--hue), 8%, 75%);
+    --text-color-lighten:  hsl(var(--hue), 8%, 92%);
+    /* --input-color: hsl(var(--hue-color), 70%, 96%); */
+    --body-color: hsl(var(--hue), 100%, 99%);
     --container-color: #fff;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+
+
+
+
+
+
+
+     /* #fff; */
+    /* --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%); */
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
 
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
+    /* --h1-font-size: 1.5rem; */
     --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
+    --h3-font-size: 1rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
-    /*========== Font weight ==========*/
-    --font-medium: 500;
+    /* ========== Font weight ========== */
+    /* --font-medium: 500;
     --font-semi-bold: 600;
 
     /*========== Margenes Bottom ==========*/
     /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-0-25: .25rem;
+    /* --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
     --mb-1: 1rem;
@@ -51,9 +75,10 @@
     --mb-3: 3rem;
 
     /*========== z index ==========*/
-    --z-tooltip: 10;
+    /* --z-tooltip: 10;
     --z-fixed: 100;
-    --z-modal: 1000;
+    --z-modal: 1000; */
+     /* */ */ */
 }
 
 /* Font size for large devices */
@@ -87,7 +112,7 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header-height) 0;
+  /* margin: 0 0 var(--header-height) 0; */
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -113,7 +138,7 @@ img {
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
-.section {
+/* .section {
   padding: 2rem 0 4rem;
 }
 
@@ -131,7 +156,7 @@ img {
 .section__title, 
 .section__subtitle {
   text-align: center;
-}
+} */
 
 /*==================== LAYOUT ====================*/
 .container {
@@ -151,8 +176,150 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--body-color)
 }
+
+  /*==================== PROFILE ====================*/
+  .profile{
+    position: relative;
+    padding-top: 3.5rem;
+
+  }
+  .profile__container{
+    row-gap: 2rem;
+
+  }
+  .profile__data{
+    display: grid;
+    text-align: center;
+  }
+  .profile__perfil{
+    width: 100px;
+    height: 150px;
+    background: linear-gradient(180deg,
+    hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
+    hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
+
+    border-radius:80%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .profile__perfil img{
+    width: 75px;
+  }
+  .profile__border{
+    border: 3.5px solid var(--first-color);
+    justify-self: center;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 75rem;
+  }
+
+  .profile__name{
+    font-size: var(--h2-font-size);
+  }
+  .profile__profession{
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+
+  }
+  .profile__social{
+    display: flex;
+    justify-content: center;
+    column-gap: 75rem;
+  
+  }
+  .profile__social-link
+{
+  font-size: 1.25rem;
+  color: var(--tiyle-color);
+  transition: .3s;
+}
+.profile__social-link:hover{
+  color: var(--first-color);
+
+}
+.profile__info{
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.profile__info-group{
+  text-align: center;
+}
+.profile__info-group{
+  font-size: var(--normal-font-size);
+  margin-bottom: 25rem;
+}
+
+.profile__info-description{
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+}
+
+.profile__buttons,
+.profile__buttons-small{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile__buttons{
+  column-gap: 1rem;
+}
+.profile__buttons-small{
+  column-gap: 25rem;
+}
+
+
+/*==================== BUTTONS ====================*/
+
+.button{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  background-color: green;
+  /* var(--first-color); */
+  color: black;
+  padding: 1.15rem 1.5rem;
+  border-radius: .5rem;
+  transition: .3s;
+  box-shadow:  0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
+ 
+}
+
+.button i{
+  font-size: 1.25rem;
+}
+.button:hover{
+  background-color: var(--first-color-alt);
+}
+.button__small{
+  padding: 0.75rem;
+  box-shadow: none;
+}
+.button__gray{
+  background-color: var(--text-color-lighten);
+  color: var(--title-color);
+
+}
+
+.button__gray:hover{
+  color: #000;
+  
+
+}
+
+
+
 
 /*==================== NAV ====================*/
 
@@ -169,7 +336,7 @@ img {
 /*==================== HOME ====================*/
 
 
-/*==================== BUTTONS ====================*/
+
 
 
 /*==================== ABOUT ====================*/

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        ==================== UNICONS ====================
+        <!-- ==================== UNICONS ==================== -->
         <link rel="shortcut icon" href="assets/img/project.png" type="image/x-icon">
 
 
@@ -22,43 +22,261 @@
         <title>Responsive Portfolio Website</title>
     </head>
     <body>
-        ==================== HEADER  PROFILE====================
+        <!-- ==================== HEADER  PROFILE==================== -->
         <!-- <header class="header" id="header"> -->
-            <header class="header_container" id="header">
-              <div class="profile__cointainer.grid"></div>
-              <div class="profile__data">
-               <div class="div.profile__border">
+            <header class="profile container" id="header">
+              <div class="profile__cointainer.grid">
+            <div class="profile__data">
+               <div class="profile__border">
                 <div class="profile__perfil">
                     <!-- INSERT MY IMAGE -->
                     <img src="assets/img/perfil.png" alt="">
                 </div>
                </div>
-               <h2 class="profile__name">Gianell Ololade/h2>
-               <h3 class="profile__profession">Web developer</h3>
-               <ul class="profile__social">
 
-                <a href="" target="profile__social-link">
-                    i.<i class="ri-instagram-line"></i>
+               <h2 class="profile__name">Adesuyi Ololade Oluwatosin</h2>
+               <h3 class="profile__profession">Web developer</h3>
+
+               <ul class="profile__social">
+                <a href="https://www.instagram.com" target="_blank" class="profile__social-link">
+                    <i class="ri-instagram-line"></i>
                 </a>
 
 
-                <a href="" target="profile__social-link">
+                <a href="https://www.linkedin.com"  target="_blank" class="profile__social-link">
                     <i class="ri-linkedin-box-fill"></i>
                     
                 </a>
 
-
-                <a href="" target="profile__social-link">
+                <a href="https://www.github.com" target="_blank" class="profile__social-link">
                     <i class="ri-github-fill"></i>
-                    
                 </a>
                </ul>
               </div>
+
+              <div class="profile__info grid">
+                <div class="profile__info-group">
+                    <h3 class="profile__info-number">7</h3>
+                    <p class="profile__info-description">
+                        Years of <br> work
+                    </p>
+                </div>
+
+                <div class="profile__info-group">
+                    <h3 class="profile__info-number">124</h3>
+                    <p class="profile__info-description">
+                        Completed <br> customers
+                    </p>
+                </div>
+
+
+                <div class="profile__info-group">
+                    <h3 class="profile__info-number">96</h3>
+                    <p class="profile__info-description">
+                        Satisfied <br> customers
+                    </p>
+                </div>
+              </div>
+
+              <div class="profile__buttons">
+                <a download="" href="assets/pdf/Alexa-Cv.pdf" class="button">
+                    <h4>DOWNLOAD CV</h4> <i class="ri-download-line"></i>
+                    </a>
+
+               <div class="profile__buttons-small">
+                <!-- INSERT A REAL NUMBER PLUS COUNTRY CODE -->
+                
+                <a href="https://api.whatsapp.com/send?phone=+2348109093828&text=Hello, more information!" target="_blank" class="button button__small button__gray">
+                 <div class="whatsapp"><h5>messenger</h5>  </div> 
+                  <i class="ri-Whatsapp-line"></i>
+                </a>
+                <!-- INSERT YOUR BRANDNAME OR PROFILE -->
+
+                <a href="https://www.facebook.com/Adesuyi Ololade Demilade" target="_blank" class="button button__small button__gray">
+                    <h5>whatsapp</h5> <i class="ri-messenger-line"></i>
+                </a>
+               </div>     
+
+              </div>
+            </div>
             
         </header>
 
         <!--==================== MAIN ====================-->
         <main class="main">
+            <section class=""filters container>
+
+
+        <!--==================== FILTER TABS ====================-->
+        <ul class="filters__content">
+        <button class="filters_button" data-target="#projects">
+            Projects
+
+        </button>
+
+        <button class="filters_button" data-target="#skills">
+            Skills
+
+        </button>
+
+
+    </ul>
+        <div class="filters__sections">
+       <!--==================== PROJECT IN MIND ====================-->
+        <div class="project__content grid" data-content id="projects">
+            <article class="projects__card">
+                <img src="assets/img/portfolio1.jpg" alt="" class="projects__img">
+                <div class="projects__modal">
+                    <div>
+                        <span class="projects__substitle">Web</span>
+                        <h3 class="projects__title">Payment site</h3>
+                        <a href="#" class="projects__button button button__small">
+                        <i class="ri-link"></i>
+                    </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <article class="projects__card">
+                <img src="assets/img/portfolio2.jpg" alt="" class="projects__img">
+                <div class="projects__modal">
+                    <div>
+                        <span class="projects__substitle">Web</span>
+                        <h3 class="projects__title">Portfolio website</h3>
+                        <a href="#" class="projects__button button button__small">
+                        <i class="ri-link"></i>
+                    </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+
+
+
+
+
+            <article class="projects__card">
+                <img src="assets/img/portfolio3.jpg" alt="" class="projects__img">
+                <div class="projects__modal">
+                    <div>
+                        <span class="projects__substitle">Movil</span>
+                        <h3 class="projects__title">Fast food app</h3>
+                        <a href="#" class="projects__button button button__small">
+                        <i class="ri-link"></i>
+                    </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+            <article class="projects__card">
+                <img src="assets/img/portfolio4.jpg" alt="" class="projects__img">
+                <div class="projects__modal">
+                    <div>
+                        <span class="projects__substitle">Movil</span>
+                        <h3 class="projects__title">Travel app</h3>
+                        <a href="#" class="projects__button button button__small">
+                        <i class="ri-link"></i>
+                    </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+            <article class="projects__card">
+                <img src="assets/img/portfolio1.jpg" alt="" class="projects__img">
+                <div class="projects__modal">
+                    <div>
+                        <span class="projects__substitle">Design</span>
+                        <h3 class="projects__title">Music app design</h3>
+                        <a href="#" class="projects__button button button__small">
+                        <i class="ri-link"></i>
+                    </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+              </div>   
+      <!--==================== SKILLS ====================-->
+            <div class="skills__content grid" data-content id="skills">
+
+            </div>
+       </div>
+    </section>
+</main>
+
+         <!--==================== FOOTER ====================-->
+        <footer class="footer container">
+         
+        </footer>
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
                 
@@ -89,9 +307,7 @@
                 
             </section>
 
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-
+      
             </section>
 
             <!--==================== TESTIMONIAL ====================-->
@@ -102,13 +318,8 @@
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
 
-            </section>
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-         
-        </footer>
+ 
+  
         
         <!--==================== SCROLL TOP ====================-->
         
